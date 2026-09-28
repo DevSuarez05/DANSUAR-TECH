@@ -5,30 +5,34 @@ import { ContactFormData, ContactFormErrors } from "@/types";
  * No hardcodea el número y sanitiza caracteres como espacios, guiones o signos '+'.
  */
 export function getWhatsAppNumber(): string {
-  const envNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
-  if (!envNumber) {
-    // Si no está configurada, retorna un valor de demostración que alerta sobre configurar la variable
-    return "573000000000";
-  }
-  // Elimina cualquier caracter no numérico (espacios, guiones, +, paréntesis)
+  const envNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "";
+  // Sanitiza el número: elimina cualquier caracter no numérico (+, espacios, guiones, paréntesis)
   return envNumber.replace(/\D/g, "");
 }
 
 /**
- * Mensaje inicial solicitado:
+ * Mensaje inicial opcional:
  * "Hola DANSUAR TECH, quiero hablar sobre un proyecto."
  */
 export const DEFAULT_WHATSAPP_MESSAGE = "Hola DANSUAR TECH, quiero hablar sobre un proyecto.";
 
 /**
- * Genera el enlace directo a WhatsApp con el número configurable y el mensaje inicial.
- * Formato: https://wa.me/[NUMERO]?text=[MENSAJE]
+ * Genera el enlace dinámico a WhatsApp basado estrictamente en NEXT_PUBLIC_WHATSAPP_NUMBER.
+ * Si no se proporciona mensaje, genera: https://wa.me/[NUMERO]
+ * Si se proporciona mensaje, genera: https://wa.me/[NUMERO]?text=[MENSAJE]
  */
-export function getWhatsAppUrl(customMessage: string = DEFAULT_WHATSAPP_MESSAGE): string {
+export function getWhatsAppUrl(customMessage?: string): string {
   const number = getWhatsAppNumber();
+  if (!number) {
+    return "#contacto";
+  }
+  if (!customMessage || !customMessage.trim()) {
+    return `https://wa.me/${number}`;
+  }
   const encodedText = encodeURIComponent(customMessage);
   return `https://wa.me/${number}?text=${encodedText}`;
 }
+
 
 /**
  * Genera un enlace a WhatsApp que incluye los detalles diligenciados en el formulario.

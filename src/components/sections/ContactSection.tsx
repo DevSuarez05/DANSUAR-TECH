@@ -42,7 +42,8 @@ export function ContactSection() {
   const [touched, setTouched] = useState<Record<string, boolean>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const whatsAppDirectUrl = getWhatsAppUrl(DEFAULT_WHATSAPP_MESSAGE);
+  const whatsAppDirectUrl = getWhatsAppUrl();
+
 
 
   const handleChange = (

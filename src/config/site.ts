@@ -1,4 +1,4 @@
-const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, "") || "573000000000";
+const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, "") || "";
 
 export const siteConfig = {
   name: "DANSUAR TECH",
@@ -11,10 +11,11 @@ export const siteConfig = {
   contact: {
     email: "contacto@dansuar.tech",
     phone: "+57 300 000 0000",
-    whatsappUrl: `https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hola DANSUAR TECH, quiero hablar sobre un proyecto.")}`,
+    whatsappUrl: whatsappNumber ? `https://wa.me/${whatsappNumber}` : "#contacto",
     location: "Colombia • Atención remota global",
     hours: "Lunes a Viernes • 8:00 AM - 6:00 PM (COT)",
   },
+
 
   navItems: [
     { label: "Servicios", href: "#servicios" },
