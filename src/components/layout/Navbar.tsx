@@ -43,13 +43,15 @@ export function Navbar() {
             aria-label="DANSUAR TECH Inicio"
             id="brand-logo-link"
           >
-            <div className="relative h-11 w-11 rounded-xl overflow-hidden border border-white/15 bg-black p-[1px] shadow-[0_0_20px_-5px_rgba(229,9,20,0.4)] group-hover:border-red-500/60 group-hover:shadow-[0_0_25px_-3px_rgba(229,9,20,0.6)] transition-all flex-shrink-0">
+            <div className="relative h-11 w-11 rounded-xl overflow-hidden border border-white/15 bg-black p-[2px] shadow-[0_0_20px_-5px_rgba(229,9,20,0.4)] group-hover:border-red-500/60 group-hover:shadow-[0_0_25px_-3px_rgba(229,9,20,0.6)] transition-all flex-shrink-0">
               <Image
-                src="/branding/dansuar-tech-logo.jpg"
+                src="/branding/dansuar-tech-emblem-4k.png"
                 alt="DANSUAR TECH Logo"
-                width={44}
-                height={44}
-                className="h-full w-full object-cover rounded-[10px]"
+                width={96}
+                height={96}
+                quality={100}
+                unoptimized
+                className="h-full w-full object-contain rounded-[10px]"
                 priority
               />
             </div>

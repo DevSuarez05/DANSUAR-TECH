@@ -414,13 +414,15 @@ export function ContactSection() {
               <div>
                 {/* 1. LOGO REAL + IDENTIDAD */}
                 <div className="flex items-center gap-4 pb-6 border-b border-white/[0.08]">
-                  <div className="relative w-16 h-16 sm:w-18 sm:h-18 rounded-2xl overflow-hidden border border-white/15 bg-black p-[1px] shadow-[0_0_24px_-4px_rgba(229,9,20,0.4)] flex-shrink-0 group-hover:border-red-500/50 group-hover:shadow-[0_0_28px_-3px_rgba(229,9,20,0.55)] transition-all">
+                  <div className="relative w-18 h-18 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-white/15 bg-black p-[2px] shadow-[0_0_24px_-4px_rgba(229,9,20,0.4)] flex-shrink-0 group-hover:border-red-500/50 group-hover:shadow-[0_0_28px_-3px_rgba(229,9,20,0.55)] transition-all">
                     <Image
-                      src="/branding/dansuar-tech-logo.jpg"
+                      src="/branding/dansuar-tech-emblem-4k.png"
                       alt="Logo DANSUAR TECH"
-                      width={72}
-                      height={72}
-                      className="w-full h-full object-cover rounded-[14px]"
+                      width={160}
+                      height={160}
+                      quality={100}
+                      unoptimized
+                      className="w-full h-full object-contain rounded-[14px]"
                     />
                   </div>
                   <div>

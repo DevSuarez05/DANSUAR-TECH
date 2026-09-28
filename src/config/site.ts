@@ -13,8 +13,8 @@ export const siteConfig = {
   description:
     "Agencia de tecnología especializada en arquitectura de software empresarial, automatización con inteligencia artificial, ERPs a medida e integraciones de alta fidelidad.",
   url: "https://dansuar.tech",
-  ogImage: "/branding/dansuar-tech-logo.jpg",
-  logo: "/branding/dansuar-tech-logo.jpg",
+  ogImage: "/branding/dansuar-tech-logo-4k.png",
+  logo: "/branding/dansuar-tech-emblem-4k.png",
   contact: {
     email: "danielandres2907@gmail.com",
     phone: formattedPhone,

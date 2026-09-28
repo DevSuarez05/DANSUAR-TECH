@@ -55,11 +55,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/branding/dansuar-tech-logo.jpg" },
+      { url: "/branding/dansuar-tech-emblem-4k.png" },
       { url: "/icon.svg", type: "image/svg+xml" },
     ],
     apple: [
-      { url: "/branding/dansuar-tech-logo.jpg" },
+      { url: "/branding/dansuar-tech-emblem-4k.png" },
     ],
   },
   openGraph: {
@@ -72,10 +72,10 @@ export const metadata: Metadata = {
     siteName: "DANSUAR TECH",
     images: [
       {
-        url: "/branding/dansuar-tech-logo.jpg",
-        width: 1200,
-        height: 630,
-        alt: "DANSUAR TECH Logo Oficial",
+        url: "/branding/dansuar-tech-logo-4k.png",
+        width: 4096,
+        height: 2284,
+        alt: "DANSUAR TECH Logo Oficial 4K",
       },
     ],
   },
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     description:
       "Desarrollamos soluciones de software, inteligencia artificial y automatización para empresas.",
     creator: "@dansuartech",
-    images: ["/branding/dansuar-tech-logo.jpg"],
+    images: ["/branding/dansuar-tech-logo-4k.png"],
   },
   robots: {
     index: true,

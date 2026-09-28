@@ -23,13 +23,15 @@ export function Footer() {
           {/* 1. Brand identity + Logo Real */}
           <div className="md:col-span-5 space-y-4">
             <Link href="/" className="inline-flex items-center gap-3.5 group" id="footer-logo">
-              <div className="relative w-11 h-11 rounded-xl overflow-hidden border border-white/20 bg-black p-[1px] shadow-[0_0_18px_-4px_rgba(229,9,20,0.4)] group-hover:border-red-500/50 transition-all flex-shrink-0">
+              <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-white/20 bg-black p-[2px] shadow-[0_0_18px_-4px_rgba(229,9,20,0.4)] group-hover:border-red-500/50 transition-all flex-shrink-0">
                 <Image
-                  src="/branding/dansuar-tech-logo.jpg"
+                  src="/branding/dansuar-tech-emblem-4k.png"
                   alt="Logo DANSUAR TECH"
-                  width={44}
-                  height={44}
-                  className="w-full h-full object-cover rounded-[10px]"
+                  width={96}
+                  height={96}
+                  quality={100}
+                  unoptimized
+                  className="w-full h-full object-contain rounded-[10px]"
                 />
               </div>
               <div>
