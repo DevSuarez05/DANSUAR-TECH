@@ -11,17 +11,28 @@ export function getWhatsAppNumber(): string {
 }
 
 /**
- * Mensaje inicial opcional:
+ * Retorna el número de WhatsApp formateado para visualización dinámicamente desde NEXT_PUBLIC_WHATSAPP_NUMBER
+ */
+export function formatWhatsAppDisplay(): string {
+  const num = getWhatsAppNumber();
+  if (!num) return "+57 (WhatsApp no configurado)";
+  if (num.startsWith("57") && num.length === 12) {
+    return `+57 ${num.slice(2, 5)} ${num.slice(5, 8)} ${num.slice(8)}`;
+  }
+  return `+${num}`;
+}
+
+/**
+ * Mensaje inicial solicitado:
  * "Hola DANSUAR TECH, quiero hablar sobre un proyecto."
  */
 export const DEFAULT_WHATSAPP_MESSAGE = "Hola DANSUAR TECH, quiero hablar sobre un proyecto.";
 
 /**
  * Genera el enlace dinámico a WhatsApp basado estrictamente en NEXT_PUBLIC_WHATSAPP_NUMBER.
- * Si no se proporciona mensaje, genera: https://wa.me/[NUMERO]
- * Si se proporciona mensaje, genera: https://wa.me/[NUMERO]?text=[MENSAJE]
+ * Con el mensaje codificado: https://wa.me/[NUMERO]?text=[MENSAJE]
  */
-export function getWhatsAppUrl(customMessage?: string): string {
+export function getWhatsAppUrl(customMessage: string = DEFAULT_WHATSAPP_MESSAGE): string {
   const number = getWhatsAppNumber();
   if (!number) {
     return "#contacto";
@@ -32,6 +43,16 @@ export function getWhatsAppUrl(customMessage?: string): string {
   const encodedText = encodeURIComponent(customMessage);
   return `https://wa.me/${number}?text=${encodedText}`;
 }
+
+/**
+ * Genera el enlace directo sin mensaje query
+ */
+export function getWhatsAppCleanUrl(): string {
+  const number = getWhatsAppNumber();
+  if (!number) return "#contacto";
+  return `https://wa.me/${number}`;
+}
+
 
 
 /**

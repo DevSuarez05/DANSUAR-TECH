@@ -19,10 +19,15 @@ import {
 } from "lucide-react";
 
 
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
+import { getWhatsAppUrl } from "@/lib/contact";
+
 type ActiveTab = "automation" | "ai" | "software" | "code";
 
 export function HeroSection() {
   const [activeTab, setActiveTab] = useState<ActiveTab>("automation");
+  const whatsAppUrl = getWhatsAppUrl();
+
 
   return (
     <section className="relative pt-32 pb-24 md:pt-40 md:pb-36 overflow-hidden bg-[#050505] selection:bg-[#e50914] selection:text-white">
@@ -128,17 +133,20 @@ export function HeroSection() {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-5">
-            {/* CTA PRINCIPAL: Hablar con DANSUAR TECH */}
+            {/* CTA PRINCIPAL: Hablar con DANSUAR TECH -> Abre WhatsApp */}
             <Button
-              href="#contacto"
+              href={whatsAppUrl}
+              isExternal
               variant="primary"
               size="lg"
-              className="w-full sm:w-auto font-semibold shadow-[0_0_30px_-5px_rgba(229,9,20,0.55)] hover:shadow-[0_0_40px_0px_rgba(255,43,54,0.75)] group"
+              className="w-full sm:w-auto font-semibold shadow-[0_0_30px_-5px_rgba(229,9,20,0.55)] hover:shadow-[0_0_40px_0px_rgba(255,43,54,0.75)] group gap-2.5"
               id="hero-talk-cta"
             >
+              <WhatsAppIcon className="w-5 h-5 text-white flex-shrink-0" />
               <span>Hablar con DANSUAR TECH</span>
-              <ArrowRight className="w-4 h-4 ml-1.5 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="w-4 h-4 ml-0.5 transition-transform group-hover:translate-x-1" />
             </Button>
+
 
             {/* CTA SECUNDARIO: Conocer nuestros servicios */}
             <Button

@@ -2,15 +2,18 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { Menu, X, ArrowRight } from "lucide-react";
-
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
+import { getWhatsAppUrl } from "@/lib/contact";
+import { Menu, X } from "lucide-react";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const whatsAppUrl = getWhatsAppUrl();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,28 +27,31 @@ export function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#050505]/90 backdrop-blur-xl border-b border-white/[0.08] shadow-[0_10px_30px_-10px_rgba(0,0,0,0.8)]"
-          : "bg-[#050505]/50 backdrop-blur-md border-b border-white/[0.04]"
+          ? "bg-[#050505]/92 backdrop-blur-xl border-b border-white/[0.08] shadow-[0_10px_30px_-10px_rgba(0,0,0,0.85)]"
+          : "bg-[#050505]/60 backdrop-blur-md border-b border-white/[0.04]"
       }`}
     >
       {/* Subtle top edge metallic hairline */}
-      <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-white/15 to-transparent" />
 
       <Container>
         <div className="flex items-center justify-between h-20">
-          {/* Corporate Brand Logo */}
+          {/* Corporate Brand Logo Real */}
           <Link
             href="/"
             className="flex items-center gap-3 group focus-visible:outline-none"
             aria-label="DANSUAR TECH Inicio"
             id="brand-logo-link"
           >
-            <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-zinc-800 to-zinc-950 p-[1px] border border-white/15 shadow-[0_0_20px_-5px_rgba(229,9,20,0.35)] group-hover:border-red-500/50 group-hover:shadow-[0_0_25px_-3px_rgba(229,9,20,0.55)] transition-all">
-              <div className="h-full w-full bg-[#08080a] rounded-[11px] flex items-center justify-center">
-                <span className="font-mono text-sm font-black text-white group-hover:scale-105 transition-transform flex items-center">
-                  <span className="text-[#e50914] font-bold">&gt;</span>D
-                </span>
-              </div>
+            <div className="relative h-11 w-11 rounded-xl overflow-hidden border border-white/15 bg-black p-[1px] shadow-[0_0_20px_-5px_rgba(229,9,20,0.4)] group-hover:border-red-500/60 group-hover:shadow-[0_0_25px_-3px_rgba(229,9,20,0.6)] transition-all flex-shrink-0">
+              <Image
+                src="/branding/dansuar-tech-logo.jpg"
+                alt="DANSUAR TECH Logo"
+                width={44}
+                height={44}
+                className="h-full w-full object-cover rounded-[10px]"
+                priority
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-lg sm:text-xl tracking-tight text-white flex items-center gap-0.5">
@@ -58,13 +64,13 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-7" aria-label="Navegación principal">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-7" aria-label="Navegación principal">
             {siteConfig.navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 className="text-xs uppercase tracking-wider font-mono text-zinc-300 hover:text-white transition-colors py-1.5 relative group"
-                id={`nav-link-${item.href.replace("#", "")}`}
+                id={`nav-link-${item.href.replace("#", "") || "inicio"}`}
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#e50914] transition-all duration-300 group-hover:w-full" />
@@ -73,25 +79,28 @@ export function Navbar() {
           </nav>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center gap-4">
-            <div className="hidden lg:flex items-center gap-2 px-2.5 py-1 rounded-full bg-zinc-900/60 border border-white/[0.08] text-[11px] text-zinc-400 font-mono">
+          <div className="hidden md:flex items-center gap-3">
+            <div className="hidden xl:flex items-center gap-2 px-2.5 py-1 rounded-full bg-zinc-900/60 border border-white/[0.08] text-[11px] text-zinc-400 font-mono">
               <span className="h-1.5 w-1.5 rounded-full bg-[#e50914] shadow-[0_0_8px_#e50914] animate-pulse" />
               <span>B2B Enterprise</span>
             </div>
 
+            {/* CTA: Hablar con nosotros -> Abre WhatsApp */}
             <Button
-              href="#contacto"
+              href={whatsAppUrl}
+              isExternal
               variant="primary"
               size="sm"
-              id="nav-cta-contact"
+              id="nav-cta-whatsapp"
+              className="gap-2"
             >
-              <span>Agendar Diagnóstico</span>
-              <ArrowRight className="w-3.5 h-3.5 ml-1" />
+              <WhatsAppIcon className="w-4 h-4 text-white" />
+              <span>Hablar con nosotros</span>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex md:hidden">
+          <div className="flex lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2.5 rounded-xl bg-zinc-900/80 border border-zinc-800 text-zinc-300 hover:text-white focus-visible:ring-2 focus-visible:ring-[#e50914] focus-visible:outline-none cursor-pointer"
@@ -110,7 +119,7 @@ export function Navbar() {
       {isOpen && (
         <div
           id="mobile-navigation-menu"
-          className="md:hidden bg-[#070709]/98 border-b border-white/[0.08] backdrop-blur-2xl px-6 py-6 animate-in slide-in-from-top-4 duration-200"
+          className="lg:hidden bg-[#070709]/98 border-b border-white/[0.08] backdrop-blur-2xl px-6 py-6 animate-in slide-in-from-top-4 duration-200"
         >
           <nav className="flex flex-col gap-3" aria-label="Menú móvil">
             {siteConfig.navItems.map((item) => (
@@ -119,27 +128,29 @@ export function Navbar() {
                 href={item.href}
                 onClick={() => setIsOpen(false)}
                 className="text-sm font-medium font-mono uppercase tracking-wider text-zinc-200 hover:text-[#e50914] focus-visible:ring-2 focus-visible:ring-[#e50914] focus-visible:outline-none py-2.5 border-b border-zinc-900 transition-colors"
-                id={`mobile-nav-${item.href.replace("#", "")}`}
+                id={`mobile-nav-${item.href.replace("#", "") || "inicio"}`}
               >
                 {item.label}
               </a>
             ))}
             <div className="pt-3">
               <Button
-                href="#contacto"
+                href={whatsAppUrl}
+                isExternal
                 variant="primary"
-                className="w-full justify-center"
+                className="w-full justify-center gap-2"
                 onClick={() => setIsOpen(false)}
-                id="mobile-nav-cta-contact"
+                id="mobile-nav-cta-whatsapp"
               >
-                <span>Agendar Diagnóstico</span>
-                <ArrowRight className="w-4 h-4 ml-1.5" />
+                <WhatsAppIcon className="w-4 h-4 text-white" />
+                <span>Hablar con nosotros</span>
               </Button>
             </div>
           </nav>
         </div>
       )}
     </header>
+
 
   );
 }
