@@ -16,16 +16,16 @@ import {
 
 export function TeamSection() {
   const pillarIcons = {
-    Software: <Code2 className="w-5 h-5 text-[#ff3844]" />,
-    "Inteligencia Artificial": <Bot className="w-5 h-5 text-[#ff3844]" />,
-    Negocios: <Briefcase className="w-5 h-5 text-[#ff3844]" />,
+    Software: <Code2 className="w-5 h-5 text-[#00D2FF]" />,
+    "Inteligencia Artificial": <Bot className="w-5 h-5 text-[#00D2FF]" />,
+    Negocios: <Briefcase className="w-5 h-5 text-[#00D2FF]" />,
   };
 
   return (
     <section className="py-28 sm:py-36 bg-[#050505] relative border-t border-white/[0.06] overflow-hidden" id="nosotros">
       {/* Background ambient lighting */}
       <div
-        className="absolute top-1/2 left-1/3 -translate-y-1/2 w-[600px] h-[300px] bg-red-600/[0.05] rounded-full blur-[160px] pointer-events-none"
+        className="absolute top-1/2 left-1/3 -translate-y-1/2 w-[600px] h-[300px] bg-blue-600/[0.05] rounded-full blur-[160px] pointer-events-none"
         aria-hidden="true"
       />
 
@@ -33,7 +33,7 @@ export function TeamSection() {
         {/* Section Heading */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16 sm:mb-20">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-zinc-900/90 border border-white/10 shadow-sm mb-5">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#e50914] shadow-[0_0_8px_#ff2b36] animate-pulse" />
+            <span className="h-1.5 w-1.5 rounded-full bg-[#00D2FF] shadow-[0_0_8px_#00D2FF] animate-pulse" />
             <span className="font-mono text-xs text-zinc-300 font-medium tracking-wider uppercase">
               Liderazgo & Dirección
             </span>
@@ -42,7 +42,7 @@ export function TeamSection() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.16]">
             Detrás de{" "}
             <span className="relative inline-block">
-              <span className="bg-gradient-to-r from-[#ff3844] via-[#e50914] to-[#ff2b36] bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(229,9,20,0.35)]">
+              <span className="bg-gradient-to-r from-[#00D2FF] via-[#0066FF] to-[#38BDF8] bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(0,102,255,0.35)]">
                 DANSUAR TECH
               </span>
             </span>
@@ -50,10 +50,10 @@ export function TeamSection() {
         </div>
 
         {/* Executive Profile Card */}
-        <div className="max-w-4xl mx-auto rounded-3xl bg-[#08080b]/90 border border-white/10 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.9),0_0_35px_-10px_rgba(229,9,20,0.15)] p-6 sm:p-10 lg:p-12 backdrop-blur-xl relative overflow-hidden">
+        <div className="max-w-4xl mx-auto rounded-3xl bg-[#08080b]/90 border border-white/10 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.9),0_0_35px_-10px_rgba(0,102,255,0.2)] p-6 sm:p-10 lg:p-12 backdrop-blur-xl relative overflow-hidden">
           
           {/* Subtle top edge metallic hairline */}
-          <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#ff3844] to-transparent" />
+          <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#00D2FF] to-transparent" />
 
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8 lg:gap-12">
             
@@ -62,19 +62,19 @@ export function TeamSection() {
               <div className="relative group">
                 {/* Ambient glow behind the portrait */}
                 <div 
-                  className="absolute inset-0 rounded-2xl bg-gradient-to-br from-red-600/30 to-transparent blur-xl group-hover:blur-2xl transition-all duration-300 opacity-60"
+                  className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-600/30 to-transparent blur-xl group-hover:blur-2xl transition-all duration-300 opacity-60"
                   aria-hidden="true" 
                 />
 
                 {/* Picture Frame */}
                 <div className="relative w-44 h-44 sm:w-48 sm:h-48 rounded-2xl p-[2px] bg-gradient-to-b from-white/20 via-zinc-800 to-zinc-950 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.9)] overflow-hidden">
                   <Image
-                    src={founderData.image}
-                    alt={founderData.name}
+                    src="/daniel-suarez.jpg"
+                    alt="Daniel Andrés Suárez Ramírez"
                     width={220}
                     height={220}
                     priority
-                    className="w-full h-full object-cover rounded-[14px] group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-center rounded-[14px] group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
 
@@ -92,7 +92,7 @@ export function TeamSection() {
                   <span>SENA • Software</span>
                 </div>
                 <div className="flex items-center justify-center gap-1.5 text-[11px] font-mono text-zinc-400 bg-zinc-900/80 px-2.5 py-1 rounded-lg border border-white/5">
-                  <GraduationCap className="w-3.5 h-3.5 text-[#ff3844]" />
+                  <GraduationCap className="w-3.5 h-3.5 text-[#00D2FF]" />
                   <span>U. Nacional • Admin</span>
                 </div>
               </div>
@@ -105,8 +105,8 @@ export function TeamSection() {
                 <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-1.5">
                   {founderData.name}
                 </h3>
-                <p className="text-xs sm:text-sm font-mono font-medium text-[#ff3844] uppercase tracking-wider flex items-center justify-center md:justify-start gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#ff3844]" />
+                <p className="text-xs sm:text-sm font-mono font-medium text-[#00D2FF] uppercase tracking-wider flex items-center justify-center md:justify-start gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#00D2FF]" />
                   {founderData.role}
                 </p>
               </div>
@@ -121,7 +121,7 @@ export function TeamSection() {
                 {founderData.pillars.map((pillar) => (
                   <div
                     key={pillar.title}
-                    className="p-4 rounded-xl bg-zinc-950/80 border border-white/[0.08] hover:border-red-500/30 transition-colors group flex flex-col justify-between text-left"
+                    className="p-4 rounded-xl bg-zinc-950/80 border border-white/[0.08] hover:border-cyan-500/30 transition-colors group flex flex-col justify-between text-left"
                   >
                     <div>
                       <div className="p-2 rounded-lg bg-zinc-900 border border-white/5 w-fit mb-2.5 group-hover:scale-105 transition-transform">
@@ -144,7 +144,7 @@ export function TeamSection() {
                   href="#servicios"
                   variant="primary"
                   size="md"
-                  className="w-full sm:w-auto font-semibold shadow-[0_0_24px_-4px_rgba(229,9,20,0.5)] group"
+                  className="w-full sm:w-auto font-semibold shadow-[0_0_24px_-4px_rgba(0,102,255,0.5)] group"
                   id="founder-cta-button"
                 >
                   <span>Conocer DANSUAR TECH</span>

@@ -11,7 +11,7 @@ import { ContactSection } from "@/components/sections/ContactSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#050505] text-zinc-100 flex flex-col selection:bg-[#e50914] selection:text-white">
+    <div className="min-h-screen bg-[#050505] text-zinc-100 flex flex-col selection:bg-[#0066FF] selection:text-white">
       {/* Fixed Navigation */}
       <Navbar />
 

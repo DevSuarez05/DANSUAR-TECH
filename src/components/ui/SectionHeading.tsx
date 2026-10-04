@@ -7,7 +7,7 @@ interface SectionHeadingProps {
   badgeVariant?: "red" | "silver" | "emerald" | "zinc" | "cyan" | "blue";
   title: string;
   highlightedText?: string;
-  highlightVariant?: "red" | "silver";
+  highlightVariant?: "red" | "silver" | "cyan" | "blue";
   subtitle?: string;
   align?: "left" | "center";
   className?: string;
@@ -15,10 +15,10 @@ interface SectionHeadingProps {
 
 export function SectionHeading({
   badge,
-  badgeVariant = "red",
+  badgeVariant = "cyan",
   title,
   highlightedText,
-  highlightVariant = "red",
+  highlightVariant = "cyan",
   subtitle,
   align = "center",
   className,
@@ -26,7 +26,9 @@ export function SectionHeading({
   const isCenter = align === "center";
 
   const highlightStyles = {
-    red: "text-[#e50914] drop-shadow-[0_0_20px_rgba(229,9,20,0.3)]",
+    red: "bg-gradient-to-r from-[#00D2FF] via-[#0066FF] to-[#38BDF8] bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(0,102,255,0.35)]",
+    cyan: "bg-gradient-to-r from-[#00D2FF] via-[#0066FF] to-[#38BDF8] bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(0,102,255,0.35)]",
+    blue: "text-[#0066FF] drop-shadow-[0_0_20px_rgba(0,102,255,0.35)]",
     silver: "bg-gradient-to-r from-white via-zinc-300 to-zinc-400 bg-clip-text text-transparent",
   };
 

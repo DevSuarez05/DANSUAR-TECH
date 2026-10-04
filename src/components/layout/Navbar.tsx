@@ -36,32 +36,23 @@ export function Navbar() {
 
       <Container>
         <div className="flex items-center justify-between h-20">
-          {/* Corporate Brand Logo Real */}
+          {/* Corporate Brand Logo */}
           <Link
             href="/"
-            className="flex items-center gap-3 group focus-visible:outline-none"
+            className="flex items-center group focus-visible:outline-none py-1"
             aria-label="DANSUAR TECH Inicio"
             id="brand-logo-link"
           >
-            <div className="relative h-13 w-13 sm:h-14 sm:w-14 rounded-2xl overflow-hidden border border-white/20 bg-black p-[2px] shadow-[0_0_24px_-4px_rgba(229,9,20,0.5)] group-hover:border-red-500/70 group-hover:shadow-[0_0_30px_-2px_rgba(229,9,20,0.7)] transition-all flex-shrink-0">
+            <div className="relative h-13 sm:h-15 w-auto flex items-center">
               <Image
-                src="/branding/dansuar-tech-emblem-4k.png"
-                alt="DANSUAR TECH Logo"
-                width={128}
-                height={128}
+                src="/branding/dansuar-tech-logo-official.png"
+                alt="DANSUAR TECH - Impulsando Negocios con Software e Inteligencia Artificial"
+                width={166}
+                height={140}
                 quality={100}
-                unoptimized
-                className="h-full w-full object-contain rounded-[12px] transform group-hover:scale-105 transition-transform"
                 priority
+                className="h-13 sm:h-15 w-auto object-contain drop-shadow-[0_0_18px_rgba(0,102,255,0.45)] group-hover:drop-shadow-[0_0_28px_rgba(0,210,255,0.8)] group-hover:scale-105 transition-all duration-300"
               />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-lg sm:text-xl tracking-tight text-white flex items-center gap-0.5">
-                DANSUAR<span className="text-[#e50914] text-xl leading-none">.</span>TECH
-              </span>
-              <span className="text-[9px] uppercase tracking-[0.22em] text-zinc-400 font-mono">
-                Software & IA Corporativa
-              </span>
             </div>
           </Link>
 
@@ -75,7 +66,7 @@ export function Navbar() {
                 id={`nav-link-${item.href.replace("#", "") || "inicio"}`}
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#e50914] transition-all duration-300 group-hover:w-full" />
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#00D2FF] transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
           </nav>
@@ -83,7 +74,7 @@ export function Navbar() {
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-3">
             <div className="hidden xl:flex items-center gap-2 px-2.5 py-1 rounded-full bg-zinc-900/60 border border-white/[0.08] text-[11px] text-zinc-400 font-mono">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#e50914] shadow-[0_0_8px_#e50914] animate-pulse" />
+              <span className="h-1.5 w-1.5 rounded-full bg-[#00D2FF] shadow-[0_0_8px_#00D2FF] animate-pulse" />
               <span>B2B Enterprise</span>
             </div>
 
@@ -105,7 +96,7 @@ export function Navbar() {
           <div className="flex lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2.5 rounded-xl bg-zinc-900/80 border border-zinc-800 text-zinc-300 hover:text-white focus-visible:ring-2 focus-visible:ring-[#e50914] focus-visible:outline-none cursor-pointer"
+              className="p-2.5 rounded-xl bg-zinc-900/80 border border-zinc-800 text-zinc-300 hover:text-white focus-visible:ring-2 focus-visible:ring-[#0066FF] focus-visible:outline-none cursor-pointer"
               aria-label={isOpen ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
               aria-expanded={isOpen}
               aria-controls="mobile-navigation-menu"
@@ -129,7 +120,7 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="text-sm font-medium font-mono uppercase tracking-wider text-zinc-200 hover:text-[#e50914] focus-visible:ring-2 focus-visible:ring-[#e50914] focus-visible:outline-none py-2.5 border-b border-zinc-900 transition-colors"
+                className="text-sm font-medium font-mono uppercase tracking-wider text-zinc-200 hover:text-[#00D2FF] focus-visible:ring-2 focus-visible:ring-[#0066FF] focus-visible:outline-none py-2.5 border-b border-zinc-900 transition-colors"
                 id={`mobile-nav-${item.href.replace("#", "") || "inicio"}`}
               >
                 {item.label}

@@ -145,11 +145,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-[#050505] text-zinc-100 antialiased selection:bg-[#e50914] selection:text-white">
+      <body className="min-h-full flex flex-col bg-[#050505] text-zinc-100 antialiased selection:bg-[#0066FF] selection:text-white">
         {/* Enlace accesible para saltar directo al contenido con teclado */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2.5 focus:bg-[#e50914] focus:text-white focus:font-mono focus:text-xs focus:rounded-xl focus:shadow-[0_0_20px_rgba(229,9,20,0.6)] focus:outline-none"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2.5 focus:bg-[#0066FF] focus:text-white focus:font-mono focus:text-xs focus:rounded-xl focus:shadow-[0_0_20px_rgba(0,102,255,0.6)] focus:outline-none"
         >
           Saltar al contenido principal
         </a>

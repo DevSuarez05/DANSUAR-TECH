@@ -7,7 +7,7 @@ import { AlertCircle, CheckCircle2, FileSpreadsheet, Cpu, Maximize2 } from "luci
 
 export function PainPoints() {
   const iconMap: Record<string, React.ReactNode> = {
-    FileSpreadsheet: <FileSpreadsheet className="w-5 h-5 text-red-400" />,
+    FileSpreadsheet: <FileSpreadsheet className="w-5 h-5 text-amber-400" />,
     Cpu: <Cpu className="w-5 h-5 text-zinc-300" />,
     Maximize2: <Maximize2 className="w-5 h-5 text-zinc-300" />,
   };
@@ -17,10 +17,10 @@ export function PainPoints() {
       <Container>
         <SectionHeading
           badge="Diagnóstico Empresarial"
-          badgeVariant="red"
+          badgeVariant="cyan"
           title="Resolvemos los cuellos de botella que"
           highlightedText="frenan el crecimiento corporativo"
-          highlightVariant="red"
+          highlightVariant="cyan"
           subtitle="Las organizaciones modernas pierden cientos de horas en herramientas fragmentadas y procesos manuales. Transformamos estas fricciones en ventajas competitivas duraderas."
           align="center"
           className="mb-16"
@@ -32,7 +32,7 @@ export function PainPoints() {
               key={item.id}
               variant="glass"
               interactive
-              className="flex flex-col justify-between h-full group border-white/[0.08] hover:border-white/[0.18]"
+              className="flex flex-col justify-between h-full group border-white/[0.08] hover:border-cyan-500/30"
             >
               {/* Problem Part */}
               <div className="space-y-4">
@@ -40,8 +40,8 @@ export function PainPoints() {
                   <div className="p-2.5 rounded-xl bg-zinc-900 border border-white/10">
                     {iconMap[item.iconName]}
                   </div>
-                  <span className="text-xs font-mono text-red-400 bg-red-950/40 border border-red-900/50 px-2.5 py-0.5 rounded-full inline-flex items-center gap-1">
-                    <AlertCircle className="w-3 h-3 text-[#e50914]" /> Ineficiencia actual
+                  <span className="text-xs font-mono text-amber-400 bg-amber-950/40 border border-amber-900/50 px-2.5 py-0.5 rounded-full inline-flex items-center gap-1">
+                    <AlertCircle className="w-3 h-3 text-amber-400" /> Ineficiencia actual
                   </span>
                 </div>
 
@@ -57,15 +57,15 @@ export function PainPoints() {
 
               {/* Transition Divider */}
               <div className="my-6 flex items-center gap-2 text-xs font-mono text-zinc-400">
-                <span className="h-px flex-1 bg-gradient-to-r from-transparent via-red-500/25 to-transparent" />
-                <span className="uppercase tracking-widest text-[10px] text-red-400 font-semibold">Arquitectura DANSUAR</span>
-                <span className="h-px flex-1 bg-gradient-to-r from-transparent via-red-500/25 to-transparent" />
+                <span className="h-px flex-1 bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
+                <span className="uppercase tracking-widest text-[10px] text-cyan-400 font-semibold">Arquitectura DANSUAR</span>
+                <span className="h-px flex-1 bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
               </div>
 
               {/* Solution Part */}
-              <div className="p-4 rounded-xl bg-zinc-900/60 border border-red-500/20 space-y-2">
+              <div className="p-4 rounded-xl bg-zinc-900/60 border border-cyan-500/25 space-y-2">
                 <div className="flex items-center gap-2 text-zinc-200">
-                  <CheckCircle2 className="w-4 h-4 text-[#e50914] flex-shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#00D2FF] flex-shrink-0" />
                   <h4 className="text-xs font-semibold tracking-wide uppercase font-mono text-zinc-200">
                     {item.solutionTitle}
                   </h4>

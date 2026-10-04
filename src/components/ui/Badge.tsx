@@ -10,28 +10,28 @@ interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
 
 export function Badge({
   children,
-  variant = "red",
+  variant = "cyan",
   size = "md",
   dot = false,
   className,
   ...props
 }: BadgeProps) {
   const variantStyles = {
-    red: "bg-red-950/40 text-red-300 border-red-500/30",
+    red: "bg-cyan-950/40 text-cyan-300 border-cyan-500/30",
+    cyan: "bg-cyan-950/40 text-cyan-300 border-cyan-500/30",
+    blue: "bg-blue-950/40 text-blue-300 border-blue-500/30",
     silver: "bg-zinc-900/80 text-zinc-300 border-zinc-700/60",
     zinc: "bg-zinc-900/90 text-zinc-400 border-zinc-800",
     emerald: "bg-emerald-950/40 text-emerald-300 border-emerald-800/40",
-    cyan: "bg-zinc-900/80 text-zinc-300 border-zinc-700/60",
-    blue: "bg-zinc-900/80 text-zinc-300 border-zinc-700/60",
   };
 
   const dotStyles = {
-    red: "bg-[#ff2b36] shadow-[0_0_8px_#ff2b36]",
+    red: "bg-[#00D2FF] shadow-[0_0_8px_#00D2FF]",
+    cyan: "bg-[#00D2FF] shadow-[0_0_8px_#00D2FF]",
+    blue: "bg-[#0066FF] shadow-[0_0_8px_#0066FF]",
     silver: "bg-zinc-300 shadow-[0_0_8px_rgba(255,255,255,0.4)]",
     zinc: "bg-zinc-400",
     emerald: "bg-emerald-400 shadow-[0_0_8px_#34d399]",
-    cyan: "bg-[#ff2b36] shadow-[0_0_8px_#ff2b36]",
-    blue: "bg-zinc-300",
   };
 
   const sizeStyles = {

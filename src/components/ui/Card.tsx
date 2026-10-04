@@ -17,7 +17,7 @@ export function Card({
   const variantStyles = {
     glass: "glass-panel",
     solid: "bg-[#0d0d10] border border-zinc-800/80",
-    glow: "glass-panel border-red-500/25 shadow-[0_0_35px_-10px_rgba(229,9,20,0.18)]",
+    glow: "glass-panel border-cyan-500/30 shadow-[0_0_35px_-10px_rgba(0,102,255,0.22)]",
     metallic: "metallic-border bg-[#0d0d11]/80 backdrop-blur-md",
   };
 

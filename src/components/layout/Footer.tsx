@@ -16,31 +16,22 @@ export function Footer() {
   return (
     <footer className="border-t border-white/[0.08] bg-[#050505] pt-16 pb-12 relative overflow-hidden" id="footer">
       {/* Top subtle technological ambient glow line */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[1px] bg-gradient-to-r from-transparent via-[#e50914]/40 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[1px] bg-gradient-to-r from-transparent via-[#0066FF]/40 to-transparent" />
 
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 pb-12 border-b border-white/[0.06]">
           {/* 1. Brand identity + Logo Real */}
           <div className="md:col-span-5 space-y-4">
-            <Link href="/" className="inline-flex items-center gap-3.5 group" id="footer-logo">
-              <div className="relative w-14 h-14 rounded-2xl overflow-hidden border border-white/20 bg-black p-[2px] shadow-[0_0_20px_-4px_rgba(229,9,20,0.45)] group-hover:border-red-500/50 transition-all flex-shrink-0">
+            <Link href="/" className="inline-flex items-center group py-1" id="footer-logo" aria-label="DANSUAR TECH Inicio">
+              <div className="relative h-14 sm:h-16 w-auto flex items-center">
                 <Image
-                  src="/branding/dansuar-tech-emblem-4k.png"
-                  alt="Logo DANSUAR TECH"
-                  width={128}
-                  height={128}
+                  src="/branding/dansuar-tech-logo-official.png"
+                  alt="DANSUAR TECH"
+                  width={166}
+                  height={140}
                   quality={100}
-                  unoptimized
-                  className="w-full h-full object-contain rounded-[12px]"
+                  className="h-14 sm:h-16 w-auto object-contain drop-shadow-[0_0_18px_rgba(0,102,255,0.4)] group-hover:drop-shadow-[0_0_25px_rgba(0,210,255,0.65)] group-hover:scale-105 transition-all duration-300"
                 />
-              </div>
-              <div>
-                <span className="font-bold text-xl tracking-tight text-white block">
-                  DANSUAR<span className="text-[#e50914]">.</span>TECH
-                </span>
-                <span className="text-[10px] font-mono text-zinc-400 uppercase tracking-wider block">
-                  Software & Inteligencia Artificial
-                </span>
               </div>
             </Link>
 
@@ -56,7 +47,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Contactar por WhatsApp"
-                className="w-9 h-9 rounded-xl bg-zinc-900 border border-white/10 hover:border-red-500/50 hover:bg-zinc-800 text-zinc-300 hover:text-white flex items-center justify-center transition-all duration-200 group"
+                className="w-9 h-9 rounded-xl bg-zinc-900 border border-white/10 hover:border-cyan-500/50 hover:bg-zinc-800 text-zinc-300 hover:text-white flex items-center justify-center transition-all duration-200 group"
                 id="footer-social-whatsapp"
               >
                 <WhatsAppIcon className="w-4 h-4 text-[#25D366] group-hover:scale-110 transition-transform" />
@@ -66,7 +57,7 @@ export function Footer() {
               <a
                 href={`mailto:${siteConfig.contact.email}`}
                 aria-label="Enviar correo corporativo"
-                className="w-9 h-9 rounded-xl bg-zinc-900 border border-white/10 hover:border-red-500/50 hover:bg-zinc-800 text-zinc-300 hover:text-white flex items-center justify-center transition-all duration-200 group"
+                className="w-9 h-9 rounded-xl bg-zinc-900 border border-white/10 hover:border-cyan-500/50 hover:bg-zinc-800 text-zinc-300 hover:text-white flex items-center justify-center transition-all duration-200 group"
                 id="footer-social-email"
               >
                 <Mail className="w-4 h-4 text-zinc-400 group-hover:text-white group-hover:scale-110 transition-all" />
@@ -78,7 +69,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Perfil LinkedIn DANSUAR TECH"
-                className="w-9 h-9 rounded-xl bg-zinc-900 border border-white/10 hover:border-red-500/50 hover:bg-zinc-800 text-zinc-300 hover:text-white flex items-center justify-center transition-all duration-200 group"
+                className="w-9 h-9 rounded-xl bg-zinc-900 border border-white/10 hover:border-cyan-500/50 hover:bg-zinc-800 text-zinc-300 hover:text-white flex items-center justify-center transition-all duration-200 group"
                 id="footer-social-linkedin"
               >
                 <LinkedInIcon className="w-4 h-4 text-zinc-400 group-hover:text-[#0a66c2] group-hover:scale-110 transition-all" />
@@ -90,7 +81,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Repositorio GitHub DANSUAR TECH"
-                className="w-9 h-9 rounded-xl bg-zinc-900 border border-white/10 hover:border-red-500/50 hover:bg-zinc-800 text-zinc-300 hover:text-white flex items-center justify-center transition-all duration-200 group"
+                className="w-9 h-9 rounded-xl bg-zinc-900 border border-white/10 hover:border-cyan-500/50 hover:bg-zinc-800 text-zinc-300 hover:text-white flex items-center justify-center transition-all duration-200 group"
                 id="footer-social-github"
               >
                 <GitHubIcon className="w-4 h-4 text-zinc-400 group-hover:text-white group-hover:scale-110 transition-all" />
@@ -172,7 +163,7 @@ export function Footer() {
                 href={whatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-medium text-zinc-200 hover:text-white transition-colors border border-white/10 rounded-lg px-3 py-2 bg-zinc-900/60 hover:bg-zinc-800 hover:border-red-500/40"
+                className="inline-flex items-center gap-2 text-xs font-medium text-zinc-200 hover:text-white transition-colors border border-white/10 rounded-lg px-3 py-2 bg-zinc-900/60 hover:bg-zinc-800 hover:border-cyan-500/40"
                 id="footer-whatsapp-cta-button"
               >
                 <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366]" />

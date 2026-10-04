@@ -20,15 +20,15 @@ export function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e50914] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505] disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer";
+    "inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0066FF] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505] disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer";
 
   const variantStyles = {
     primary:
-      "bg-[#e50914] text-white font-semibold border border-red-500/60 shadow-[0_0_24px_-4px_rgba(229,9,20,0.5)] hover:bg-[#ff1f2d] hover:shadow-[0_0_32px_-2px_rgba(255,43,54,0.7)] active:scale-[0.98]",
+      "bg-[#0066FF] text-white font-semibold border border-blue-400/50 shadow-[0_0_24px_-4px_rgba(0,102,255,0.5)] hover:bg-[#0052cc] hover:shadow-[0_0_32px_-2px_rgba(0,210,255,0.65)] hover:border-cyan-400/60 active:scale-[0.98]",
     secondary:
       "bg-zinc-900/90 text-zinc-100 border border-zinc-800 hover:bg-zinc-800/90 hover:border-zinc-600 active:scale-[0.98]",
     outline:
-      "border border-zinc-800 text-zinc-300 bg-transparent hover:bg-zinc-900/60 hover:border-red-500/40 hover:text-white active:scale-[0.98]",
+      "border border-zinc-800 text-zinc-300 bg-transparent hover:bg-zinc-900/60 hover:border-cyan-500/40 hover:text-white active:scale-[0.98]",
     ghost:
       "text-zinc-400 hover:text-white hover:bg-zinc-900/60 active:scale-[0.98]",
     metallic:

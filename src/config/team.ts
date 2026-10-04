@@ -2,7 +2,7 @@ export const founderData = {
   name: "Daniel Andrés Suárez Ramírez",
   role: "CEO & Founder — DANSUAR TECH",
   bio: "Soy desarrollador de software egresado del SENA y estudiante de Administración de Empresas en la Universidad Nacional de Colombia. Actualmente lidero DANSUAR TECH, combinando tecnología, desarrollo de software y visión empresarial para construir soluciones digitales.",
-  image: "/founder.jpg",
+  image: "/daniel-suarez.jpg",
   pillars: [
     {
       title: "Software",

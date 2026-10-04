@@ -122,7 +122,7 @@ export function ContactSection() {
     >
       {/* Glow ambiental de fondo */}
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[360px] bg-red-600/[0.04] rounded-full blur-[150px] pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[360px] bg-blue-600/[0.04] rounded-full blur-[150px] pointer-events-none"
         aria-hidden="true"
       />
       <div className="absolute inset-0 bg-tech-dots opacity-25 pointer-events-none" />
@@ -130,10 +130,10 @@ export function ContactSection() {
       <Container className="relative z-10">
         <SectionHeading
           badge="Contacto Directo"
-          badgeVariant="red"
+          badgeVariant="cyan"
           title="¿Tienes un proyecto en mente?"
           highlightedText="Hagámoslo realidad"
-          highlightVariant="red"
+          highlightVariant="cyan"
           subtitle="Cuéntanos qué quieres construir y exploremos juntos cómo convertirlo en una solución tecnológica."
           align="center"
           className="mb-14 sm:mb-18"
@@ -151,11 +151,11 @@ export function ContactSection() {
               {isSuccess ? (
                 /* Estado de Éxito / Confirmación */
                 <div className="py-10 px-4 text-center space-y-5 animate-in fade-in zoom-in-95 duration-300 my-auto">
-                  <div className="h-16 w-16 bg-red-950/40 border border-red-500/50 rounded-2xl flex items-center justify-center mx-auto text-[#e50914] shadow-[0_0_30px_-5px_rgba(229,9,20,0.5)]">
+                  <div className="h-16 w-16 bg-blue-950/40 border border-cyan-500/50 rounded-2xl flex items-center justify-center mx-auto text-[#00D2FF] shadow-[0_0_30px_-5px_rgba(0,102,255,0.5)]">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
                   <div>
-                    <span className="text-xs font-mono uppercase tracking-widest text-[#e50914] font-semibold block mb-1">
+                    <span className="text-xs font-mono uppercase tracking-widest text-[#00D2FF] font-semibold block mb-1">
                       Solicitud Recibida
                     </span>
                     <h3 className="text-2xl font-bold text-white mb-2">
@@ -172,7 +172,7 @@ export function ContactSection() {
                       href={getWhatsAppFormUrl(formData)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-900 border border-white/10 hover:border-red-500/40 text-xs font-mono text-white transition-colors"
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-900 border border-white/10 hover:border-cyan-500/40 text-xs font-mono text-white transition-colors"
                     >
                       <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366]" />
                       <span>Reenviar copia a WhatsApp</span>
@@ -226,13 +226,13 @@ export function ContactSection() {
                             placeholder="Tu nombre completo"
                             className={`w-full pl-10 pr-4 py-2.5 rounded-xl bg-zinc-900/90 border text-white text-sm placeholder:text-zinc-600 focus:outline-none transition-colors ${
                               errors.name && touched.name
-                                ? "border-red-500/80 focus:border-red-500 focus:ring-1 focus:ring-red-500"
-                                : "border-zinc-800 focus:border-[#e50914] focus:ring-1 focus:ring-[#e50914]"
+                                ? "border-rose-500/80 focus:border-rose-500 focus:ring-1 focus:ring-rose-500"
+                                : "border-zinc-800 focus:border-[#0066FF] focus:ring-1 focus:ring-[#0066FF]"
                             }`}
                           />
                         </div>
                         {errors.name && touched.name && (
-                          <p className="mt-1 text-xs text-red-400 flex items-center gap-1 font-mono">
+                          <p className="mt-1 text-xs text-rose-400 flex items-center gap-1 font-mono">
                             <AlertCircle className="w-3 h-3 flex-shrink-0" />
                             <span>{errors.name}</span>
                           </p>
@@ -258,13 +258,13 @@ export function ContactSection() {
                             placeholder="Nombre de tu empresa"
                             className={`w-full pl-10 pr-4 py-2.5 rounded-xl bg-zinc-900/90 border text-white text-sm placeholder:text-zinc-600 focus:outline-none transition-colors ${
                               errors.company && touched.company
-                                ? "border-red-500/80 focus:border-red-500 focus:ring-1 focus:ring-red-500"
-                                : "border-zinc-800 focus:border-[#e50914] focus:ring-1 focus:ring-[#e50914]"
+                                ? "border-rose-500/80 focus:border-rose-500 focus:ring-1 focus:ring-rose-500"
+                                : "border-zinc-800 focus:border-[#0066FF] focus:ring-1 focus:ring-[#0066FF]"
                             }`}
                           />
                         </div>
                         {errors.company && touched.company && (
-                          <p className="mt-1 text-xs text-red-400 flex items-center gap-1 font-mono">
+                          <p className="mt-1 text-xs text-rose-400 flex items-center gap-1 font-mono">
                             <AlertCircle className="w-3 h-3 flex-shrink-0" />
                             <span>{errors.company}</span>
                           </p>
@@ -293,13 +293,13 @@ export function ContactSection() {
                             placeholder="nombre@empresa.com"
                             className={`w-full pl-10 pr-4 py-2.5 rounded-xl bg-zinc-900/90 border text-white text-sm placeholder:text-zinc-600 focus:outline-none transition-colors ${
                               errors.email && touched.email
-                                ? "border-red-500/80 focus:border-red-500 focus:ring-1 focus:ring-red-500"
-                                : "border-zinc-800 focus:border-[#e50914] focus:ring-1 focus:ring-[#e50914]"
+                                ? "border-rose-500/80 focus:border-rose-500 focus:ring-1 focus:ring-rose-500"
+                                : "border-zinc-800 focus:border-[#0066FF] focus:ring-1 focus:ring-[#0066FF]"
                             }`}
                           />
                         </div>
                         {errors.email && touched.email && (
-                          <p className="mt-1 text-xs text-red-400 flex items-center gap-1 font-mono">
+                          <p className="mt-1 text-xs text-rose-400 flex items-center gap-1 font-mono">
                             <AlertCircle className="w-3 h-3 flex-shrink-0" />
                             <span>{errors.email}</span>
                           </p>
@@ -325,13 +325,13 @@ export function ContactSection() {
                             placeholder="+57 300 000 0000"
                             className={`w-full pl-10 pr-4 py-2.5 rounded-xl bg-zinc-900/90 border text-white text-sm placeholder:text-zinc-600 focus:outline-none transition-colors ${
                               errors.whatsapp && touched.whatsapp
-                                ? "border-red-500/80 focus:border-red-500 focus:ring-1 focus:ring-red-500"
-                                : "border-zinc-800 focus:border-[#e50914] focus:ring-1 focus:ring-[#e50914]"
+                                ? "border-rose-500/80 focus:border-rose-500 focus:ring-1 focus:ring-rose-500"
+                                : "border-zinc-800 focus:border-[#0066FF] focus:ring-1 focus:ring-[#0066FF]"
                             }`}
                           />
                         </div>
                         {errors.whatsapp && touched.whatsapp && (
-                          <p className="mt-1 text-xs text-red-400 flex items-center gap-1 font-mono">
+                          <p className="mt-1 text-xs text-rose-400 flex items-center gap-1 font-mono">
                             <AlertCircle className="w-3 h-3 flex-shrink-0" />
                             <span>{errors.whatsapp}</span>
                           </p>
@@ -357,13 +357,13 @@ export function ContactSection() {
                           placeholder="Cuéntanos qué quieres construir y exploremos juntos cómo convertirlo en una solución tecnológica..."
                           className={`w-full px-4 py-3 rounded-xl bg-zinc-900/90 border text-white text-sm placeholder:text-zinc-600 focus:outline-none transition-colors resize-none ${
                             errors.message && touched.message
-                              ? "border-red-500/80 focus:border-red-500 focus:ring-1 focus:ring-red-500"
-                              : "border-zinc-800 focus:border-[#e50914] focus:ring-1 focus:ring-[#e50914]"
+                              ? "border-rose-500/80 focus:border-rose-500 focus:ring-1 focus:ring-rose-500"
+                              : "border-zinc-800 focus:border-[#0066FF] focus:ring-1 focus:ring-[#0066FF]"
                           }`}
                         />
                       </div>
                       {errors.message && touched.message && (
-                        <p className="mt-1 text-xs text-red-400 flex items-center gap-1 font-mono">
+                        <p className="mt-1 text-xs text-rose-400 flex items-center gap-1 font-mono">
                           <AlertCircle className="w-3 h-3 flex-shrink-0" />
                           <span>{errors.message}</span>
                         </p>
@@ -378,7 +378,7 @@ export function ContactSection() {
                       variant="primary"
                       size="lg"
                       disabled={isSubmitting}
-                      className="w-full justify-center group glow-red-button cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
+                      className="w-full justify-center group glow-blue-button cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
                       id="submit-contact-button"
                     >
                       {isSubmitting ? (
@@ -406,28 +406,27 @@ export function ContactSection() {
           {/* COLUMNA DERECHA: TARJETA VISUAL PREMIUM (LOGO REAL + WHATSAPP + EMAIL) */}
           {/* ======================================================== */}
           <div className="lg:col-span-5 flex flex-col">
-            <div className="rounded-3xl p-7 sm:p-8 bg-gradient-to-b from-[#0e0e13] via-[#09090c] to-[#060608] border border-red-500/25 hover:border-red-500/40 shadow-[0_0_35px_-10px_rgba(229,9,20,0.22)] transition-all duration-300 relative overflow-hidden flex-1 flex flex-col justify-between group">
+            <div className="rounded-3xl p-7 sm:p-8 bg-gradient-to-b from-[#0e0e13] via-[#09090c] to-[#060608] border border-cyan-500/30 hover:border-cyan-400/50 shadow-[0_0_35px_-10px_rgba(0,102,255,0.22)] transition-all duration-300 relative overflow-hidden flex-1 flex flex-col justify-between group">
               {/* Resplandor superior sutil */}
-              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#e50914]/60 to-transparent" />
-              <div className="absolute -top-20 -right-20 w-44 h-44 bg-red-600/[0.08] rounded-full blur-3xl pointer-events-none group-hover:bg-red-600/[0.14] transition-all duration-500" />
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#00D2FF]/60 to-transparent" />
+              <div className="absolute -top-20 -right-20 w-44 h-44 bg-blue-600/[0.08] rounded-full blur-3xl pointer-events-none group-hover:bg-cyan-600/[0.14] transition-all duration-500" />
 
               <div>
                 {/* 1. LOGO REAL + IDENTIDAD */}
-                <div className="flex items-center gap-5 pb-6 border-b border-white/[0.08]">
-                  <div className="relative w-22 h-22 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border border-white/20 bg-black p-[3px] shadow-[0_0_30px_-4px_rgba(229,9,20,0.5)] flex-shrink-0 group-hover:border-red-500/60 group-hover:shadow-[0_0_35px_-2px_rgba(229,9,20,0.7)] transition-all">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 pb-6 border-b border-white/[0.08]">
+                  <div className="relative h-20 sm:h-24 w-auto flex items-center flex-shrink-0">
                     <Image
-                      src="/branding/dansuar-tech-emblem-4k.png"
-                      alt="Logo DANSUAR TECH"
-                      width={224}
-                      height={224}
+                      src="/branding/dansuar-tech-logo-official.png"
+                      alt="Logo Oficial DANSUAR TECH"
+                      width={190}
+                      height={160}
                       quality={100}
-                      unoptimized
-                      className="w-full h-full object-contain rounded-[14px] transform group-hover:scale-105 transition-transform"
+                      className="h-20 sm:h-24 w-auto object-contain drop-shadow-[0_0_24px_rgba(0,102,255,0.45)] group-hover:drop-shadow-[0_0_32px_rgba(0,210,255,0.7)] group-hover:scale-105 transition-all duration-300"
                     />
                   </div>
                   <div>
-                    <h3 className="text-2xl sm:text-3xl font-black tracking-tight text-white flex items-center gap-1">
-                      DANSUAR<span className="text-[#e50914]">.</span>TECH
+                    <h3 className="text-xl sm:text-2xl font-black tracking-tight text-white flex items-center gap-1">
+                      DANSUAR<span className="text-[#00D2FF]">.</span>TECH
                     </h3>
                     <p className="text-xs sm:text-sm text-zinc-300 leading-snug mt-1.5 font-mono">
                       Impulsando negocios con software e inteligencia artificial.
@@ -438,8 +437,8 @@ export function ContactSection() {
                 {/* 2. BLOQUE WHATSAPP */}
                 <div className="py-6 border-b border-white/[0.08] space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-[11px] font-mono uppercase tracking-widest text-[#e50914] font-semibold flex items-center gap-1.5">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#e50914] shadow-[0_0_6px_#e50914] animate-pulse" />
+                    <span className="text-[11px] font-mono uppercase tracking-widest text-[#00D2FF] font-semibold flex items-center gap-1.5">
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#00D2FF] shadow-[0_0_6px_#00D2FF] animate-pulse" />
                       WHATSAPP
                     </span>
                     <span className="text-[10px] font-mono text-zinc-400">Atención Directa</span>
@@ -450,7 +449,7 @@ export function ContactSection() {
                     href={whatsAppDirectUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xl sm:text-2xl font-mono font-bold text-white hover:text-red-400 transition-colors block tracking-tight"
+                    className="text-xl sm:text-2xl font-mono font-bold text-white hover:text-cyan-400 transition-colors block tracking-tight"
                     id="contact-whatsapp-display-link"
                   >
                     {whatsAppDisplayNumber}
@@ -461,7 +460,7 @@ export function ContactSection() {
                     href={whatsAppDirectUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-xl bg-zinc-900 border border-red-500/30 hover:border-red-500/70 hover:bg-zinc-800 text-white font-semibold text-sm transition-all duration-300 shadow-[0_0_20px_-6px_rgba(229,9,20,0.3)] hover:shadow-[0_0_28px_-3px_rgba(229,9,20,0.5)] group/btn"
+                    className="w-full inline-flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-xl bg-zinc-900 border border-cyan-500/30 hover:border-cyan-400/70 hover:bg-zinc-800 text-white font-semibold text-sm transition-all duration-300 shadow-[0_0_20px_-6px_rgba(0,102,255,0.35)] hover:shadow-[0_0_28px_-3px_rgba(0,210,255,0.55)] group/btn"
                     id="contact-card-whatsapp-button"
                   >
                     <WhatsAppIcon className="w-5 h-5 text-[#25D366] group-hover/btn:scale-110 transition-transform flex-shrink-0" />
@@ -509,7 +508,7 @@ export function ContactSection() {
                   <span>Acuerdo de Confidencialidad (NDA) antes de revisar datos.</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs text-zinc-300">
-                  <Clock className="w-4 h-4 text-[#e50914] flex-shrink-0" />
+                  <Clock className="w-4 h-4 text-[#00D2FF] flex-shrink-0" />
                   <span>Tiempo de respuesta promedio: menos de 2 horas.</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs text-zinc-300">
